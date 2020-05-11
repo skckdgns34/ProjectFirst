@@ -28,6 +28,13 @@ public class StudentExample {
 		//System.out.println("이름 :" + stu2.name + " 나이 :" + stu2.age);
 		//stu2.eat("수박");
 		
+		Student stu3 = new Student("Choi", 25);
+		stu3.major = "Math";
+		
+		Student stu4 = new Student("asd", 25, "zxc");
+		System.out.println(stu3.name);
+
+		
 		People peo = new People();
 		peo.age = 5;
 		peo.name = "Kim";
@@ -40,6 +47,8 @@ public class StudentExample {
 		s1[0] = stu;
 		s1[1] = stu1;
 		s1[2] = stu2;
+		
+
 		
 		String inputStr = "Choi";
 		for(Student stud : s1) {
