@@ -28,6 +28,7 @@ public class AccountExample {
 						break;
 					}
 				}
+				
 				System.out.println("계좌 생성되었습니다.");
 			} else if(menu==2) {
 				System.out.println("계좌목록 선택.");
