@@ -3,6 +3,7 @@ package com.yedam.classes;
 import java.util.Scanner;
 
 public class AccountExample {
+	
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
 		Account[] accounts = new Account[100];
