@@ -4,7 +4,7 @@ public class Parent {
 	private String lastName;
 	private String firstName;
 	private String telNumber; //집전화
-	private Parent() {
+	protected Parent() {
 	}
 	
 	public Parent(String lastName, String firstName, String telNumber) {
