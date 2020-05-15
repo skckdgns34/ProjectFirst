@@ -10,6 +10,19 @@ public class Company extends Friend{
 	}
 
 	
+//	@Override
+//	public Friend choice() {
+//
+//		Company fri = (Company)super.choice();
+//		if(fri != null){
+//			System.out.println("전공 입력하세요.");
+//			String depart = scn.nextLine();
+//			fri.setDepartment(depart);
+//		}
+//		return null;
+//	}
+
+
 	public String getDepartment() {
 		return department;
 	}

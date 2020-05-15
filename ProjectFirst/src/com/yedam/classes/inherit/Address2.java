@@ -105,7 +105,7 @@ public class Address2 {
 				addressList();
 			} else if (menu == 3) { // 3.이름 비교
 				compareName();
-			} else if (menu == 4) { // 4.종료
+			} else if (menu == 4) { // 5.종료
 				System.out.println("종료 선택.");
 				break;
 			}

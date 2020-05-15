@@ -11,7 +11,7 @@ public class Address {
 	public static void main(String[] args) {
 		Address2 add = new Address2();
 		add.execute();
-		
+//		/* */
 /*		 Scanner scn = new Scanner(System.in);
 		 Friend[] friends = new Friend[100];
 		 
