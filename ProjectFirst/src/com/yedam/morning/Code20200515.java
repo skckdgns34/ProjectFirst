@@ -24,26 +24,26 @@ public class Code20200515 {
 		}
 		System.out.println("====================================");
 
-//		a=1;
-//		for(int i = 0; i<arr.length; i++) {
-//			for(int j = 0; j<arr[i].length; j++) {
-//				arr[i][j]=a++;
-//				System.out.print(arr[i][j] + "\t");
-//			}
-//			
-//			System.out.println();
-//		}
-		
-		System.out.println("====================================");
 		a=1;
 		for(int i = 0; i<arr.length; i++) {
 			for(int j = 0; j<arr[i].length; j++) {
-				arr[j][i]=a++;
+				arr[i][j]=a++;
 				System.out.print(arr[i][j] + "\t");
-				
 			}
+			
 			System.out.println();
 		}
+		System.out.println("====================================");
+		
+//		a=1;
+//		for(int i = 0; i<arr.length; i++) {
+//			for(int j = 0; j<arr[i].length; j++) {
+//				arr[j][i]=a++;
+//				System.out.print(arr[i][j] + "\t");
+//				
+//			}
+//			System.out.println();
+//		}
 		
 		
 		

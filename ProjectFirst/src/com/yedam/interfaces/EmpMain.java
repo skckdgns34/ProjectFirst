@@ -40,6 +40,7 @@ public class EmpMain {
 				System.out.print("삭제할 사원번호 입력: ");
 				int empId = scn.nextInt();
 				service.removeEmp(empId);
+				
 			} else if(menu==5) {
 				break;
 			}
