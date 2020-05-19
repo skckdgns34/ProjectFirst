@@ -37,7 +37,7 @@ public class DeptMain {
 				System.out.print("상사 입력: ");
 				int managerId = scn.nextInt();
 				scn.nextLine();
-				Department Dept = new Department(deptId, "", managerId, 0);
+				Department Dept = new Department(deptId, "IT", managerId, 1700);
 				service.changeDept(Dept);
 
 			} else if (menu == 4) {

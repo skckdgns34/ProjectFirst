@@ -23,7 +23,7 @@ public class DeptDao {
 	}
 	
 	public void insertDept(Department dept) {
-		String sql = "insert into departments values(?,?,?,?)";
+		String sql = "insert into dept3 values(?,?,?,?)";
 		conn = getConnect();
 		try {
 			pstmt = conn.prepareStatement(sql);
@@ -58,7 +58,6 @@ public class DeptDao {
 				
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return departments;
@@ -66,15 +65,14 @@ public class DeptDao {
 	
 	public void updateDept(Department dept) {
 		conn = getConnect();
-		String sql = "update dept3 set salary = ? where department_id = ?";
+		String sql = "update dept3 set manager_id = ? where department_id = ?";
 		try {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, dept.getManagerId());
-			pstmt.setInt(2, dept.getLocationId());
+			pstmt.setInt(2, dept.getDepartmentId());
 			int r = pstmt.executeUpdate();
 			System.out.println(r + "건 변경됨");
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
