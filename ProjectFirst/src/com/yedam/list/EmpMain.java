@@ -1,4 +1,4 @@
-package com.yedam.interfaces;
+package com.yedam.list;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -15,15 +15,15 @@ public class EmpMain {
 			System.out.println("==============================================");
 			System.out.print("선택> ");
 			
-//			int menu = 0;
-//			try{
-//				menu = scn.nextInt();
-//			} catch(InputMismatchException e) {
-//				System.out.println("숫자로 입력해주세요");
-//				scn = new Scanner(System.in);
-//			}
-			try {
-				int menu = scn.nextInt();
+			int menu = 0;
+			try{
+				menu = scn.nextInt();
+			} catch(InputMismatchException e) {
+				System.out.println("숫자로 입력해주세요");
+				scn = new Scanner(System.in);
+			}
+//			try {
+//				int menu = scn.nextInt();
 				if (menu == 1) {
 					System.out.print("사원번호 입력: ");
 					int empId = scn.nextInt();scn.nextLine();
@@ -60,10 +60,10 @@ public class EmpMain {
 					break;
 				}
 				
-			} catch (Exception e) {
-				System.out.println("잘못 입력했어요 다시입력해요");
-				scn = new Scanner(System.in);
-			} //end of catch
+//			} catch (Exception e) {
+//				System.out.println("잘못 입력했어요 다시입력해요");
+//				scn = new Scanner(System.in);
+//			} //end of catch
 		} // end of while
 		System.out.println("프로그램 종료");
 

@@ -1,10 +1,12 @@
-package com.yedam.interfaces;
+package com.yedam.list;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 
 // DB 처리
@@ -43,10 +45,10 @@ public class EmpDao {
 		}
 	}
 	
-	public Employee[] getEmpList() {
+	public List<Employee> getEmpList() {
 		conn = getConnect();
 		String sql = "select * from emp";
-		Employee[] employees = new Employee[100];
+		List<Employee> employees = new ArrayList<>();
 		int i = 0;
 		try {
 			pstmt = conn.prepareStatement(sql);
@@ -57,8 +59,7 @@ public class EmpDao {
 											,rs.getInt("salary")
 											,rs.getString("hire_date")
 				);
-				employees[i++] = emp;
-				
+				employees.add(emp);
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

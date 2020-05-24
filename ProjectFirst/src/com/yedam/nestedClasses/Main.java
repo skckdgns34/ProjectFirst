@@ -17,7 +17,9 @@ class A {
 		}
 //		static void method2() { 		정적 메소드도 몬옴
 //			System.out.println("method2() 호출됨.");
+		
 //		}
+		C field5 = new C();
 	}
 	
 	//정적 멤버 클래스 
@@ -33,6 +35,7 @@ class A {
 		static void method2() {  //정적 메소드 가능
 			System.out.println("method2() 호출됨");
 		}
+	
 	}
 	
 	//로컬 클래스 (메소드 안에꺼)
@@ -41,9 +44,11 @@ class A {
 			D(){
 				System.out.println("D객체가 생성됨.");
 			}
+			B b = new B();
 			int field1;
 			void method1() {
 				System.out.println("method1() 호출됨");
+				C.method2();
 			}
 		}
 		D d = new D();
@@ -52,7 +57,12 @@ class A {
 	}
 }
 public class Main {
+	public static void a() {
+		
+	}
 	public static void main(String[] args) {
+		
+		a();
 		A a = new A();
 		A.B b = a.new B();
 		

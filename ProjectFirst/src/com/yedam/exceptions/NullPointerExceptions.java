@@ -5,7 +5,7 @@ public class NullPointerExceptions {
 		String str = "Hello";
 		try {
 			System.out.println(str.toString());
-			Class.forName("java.lang.String2");			
+			Class.forName("java.lang.String");			
 		} catch (Exception e) {
 			System.out.println("알수 없는 예외 발생");
 		}
