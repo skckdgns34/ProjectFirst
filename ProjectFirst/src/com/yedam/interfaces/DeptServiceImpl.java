@@ -9,6 +9,7 @@ public class DeptServiceImpl implements DeptService{
 
 	}
 
+	
 	@Override
 	public void getDeptList() {
 		for(Department dept : dao.getdeptList()) {
