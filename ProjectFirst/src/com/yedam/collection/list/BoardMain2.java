@@ -4,14 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class BoardMain {
+public class BoardMain2 {
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
-		List<Board> list = new ArrayList<>();
-//		BoardService service = new BoardServiceImpl();
-//		service.execute();
-
-		BoardService service = new BoardServiceImpl();
+		BoardService2 service = new BoardServiceImpl2();
 	
 		while(true) {
 			System.out.println("--------------------------------");
@@ -29,7 +25,7 @@ public class BoardMain {
 				System.out.println("작성자 입력.");
 				String writer = scn.nextLine();
 				Board board = new Board(title, content, writer);
-				service.insertBoard(list, board);
+				service.insertBoard(board);
 				// 2.수정
 			}else if(menu==2) { 
 				System.out.println("수정할 글 제목 입력하세요.");
@@ -37,16 +33,16 @@ public class BoardMain {
 				System.out.println("수정내용 입력하세요");
 				String content = scn.nextLine();
 				Board board = new Board(title, content, null);
-				service.changeBoard(list, board);
+				service.updateBoard(board);
 				
 				// 3.삭제
 			}else if(menu==3) { 
 				String title = scn.nextLine();
-				service.removeBoard(list, title);
+				service.deleteBoard(title);
 				
 //				 4.리스트
 			}else if(menu==4) { 
-				service.getBoardList(list);
+				service.showBoard();
 				
 //				 5.종료
 			}else if(menu==5) { 

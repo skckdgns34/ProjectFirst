@@ -7,9 +7,10 @@ class Orange{
 }
 public class BoxExample {
 	public static void main(String[] args) {
-		Box<String> box = new Box<String>();
+		Box<Object> box = new Box<Object>();
 		box.set("Hello");
 		String str = (String) box.get();
+		System.out.println(str);
 		
 		Box<Apple> appleBox = new Box<Apple>();
 		appleBox.set(new Apple());

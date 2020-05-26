@@ -1,6 +1,5 @@
 package com.yedam.collection.list;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -16,31 +15,27 @@ public class BoardServiceImpl implements BoardService {
 		list.add(board);
 	}
 	
+	//수정
+	@Override
+	public void changeBoard(List<Board> list, Board board) {
+		for(int i = 0; i<list.size(); i++) {
+			if(list.get(i).getTitle().equals(board.getTitle())) {
+				list.get(i).setContent(board.getContent());
+			}
+		}
+	}
+	
 	//리스트
 	@Override
-	public void getBoardList(List<Board> list, Board board) {
+	public void getBoardList(List<Board> list) {
 		for(int i = 0; i<list.size(); i++) {
 			System.out.println(list.get(i).toString());
 		}
 	}
-	//수정
+
+	//삭제
 	@Override
-	public void changeBoard(List<Board> list, Board board) {
-		System.out.println("수정할 글 제목 입력하세요.");
-		String title = scn.nextLine();
-		System.out.println("수정내용 입력하세요");
-		String content = scn.nextLine();
-		for(int i = 0; i<list.size(); i++) {
-			if(list.get(i).getTitle().equals(title)) {
-				list.get(i).setContent(content);
-			}
-		}
-	}
-	//사
-	@Override
-	public void removeBoard(List<Board> list, Board board) {
-		String title = scn.nextLine();
-		
+	public void removeBoard(List<Board> list, String title) {
 		for(int i = 0; i<list.size(); i++) {
 			if(list.get(i).getTitle().equals(title)) {
 				list.remove(i);
@@ -48,8 +43,6 @@ public class BoardServiceImpl implements BoardService {
 		}
 	}
 
-	
-	
 	//입력
 //	@Override
 //	public void createBoard() {

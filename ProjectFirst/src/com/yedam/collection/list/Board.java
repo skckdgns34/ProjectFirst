@@ -30,7 +30,7 @@ public class Board {
 	}
 	@Override
 	public String toString() {
-		return "제목: " + this.title + " 내용: " + this.content + " 작성자: " + this.writer;
+		return "제목: " + title + " 내용: " + content + " 작성자: " + writer;
 	}
 	
 }

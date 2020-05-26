@@ -23,6 +23,5 @@ public class LinkedListExample {
 		}
 		endTime = System.nanoTime();
 		System.out.println("LinkedList: " + (endTime-startTime));
-		
 	}
 }
