@@ -49,7 +49,6 @@ public class EmpDao {
 		conn = getConnect();
 		String sql = "select * from emp";
 		List<Employee> employees = new ArrayList<>();
-		int i = 0;
 		try {
 			pstmt = conn.prepareStatement(sql);
 			ResultSet rs = pstmt.executeQuery();

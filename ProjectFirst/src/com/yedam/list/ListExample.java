@@ -29,7 +29,6 @@ public class ListExample {
 		for(Member mem : members) {
 			System.out.println(mem.getName() + ", " + mem.getAge());
 		}
-		
 		list.add("Hello");
 		list.add("World");
 		list.add("Hong");
